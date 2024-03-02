@@ -1,23 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="https://frankgp.com/component/layout.js" type="module"></script>
     <script src="https://frankgp.com/component/stat.js" type="module"></script>
-    <title>Cinema</title>
+    <title>Homework & Lectures | SoyHenry</title>
   </head>
   <body>
-    <header></header>
-
     <main>
-      <h1>Proyecto de M2</h1>
-      <div id="movieList" class="card_container"></div>
-    </main>
-    <footer></footer>
+      <style>
+        main .btn_container {
+          display: flex;
+          flex-direction: column;
+          align-items: start;
+        }
+      </style>
+      <h1>Homework & Lectures | SoyHenry</h1>
+      <br />
 
-    <script src="./scripts/tempData.js?2024_02_28.2"></script>
-    <script>
-      var newDate_getTime = new Date().getTime();
-      import("./scripts/layout.js?" + newDate_getTime);
-      import("./scripts/main.js?" + newDate_getTime);
-    </script>
+      <section>
+        <br />
+        <h2>Homework | Modulo 2</h2>
+        <br />
+        <div class="btn_container">
+          <a href="http://frankgp.com/soyhenry/m2/hw/01" target="_blank" class="btn"><i class="icon-public"></i> H01 Full Stack</a>
+          <a href="http://frankgp.com/soyhenry/m2/hw/02" target="_blank" class="btn"><i class="icon-public"></i> H02 Ajax</a>
+        </div>
+        <br />
+        <hr />
+      </section>
+
+      <section>
+        <br />
+        <h2>Lecture Code</h2>
+        <br />
+        <div class="btn_container">
+          <h3>Lectures | Modulo 2</h3>
+        </div>
+        <a href="https://github.com/frank-gp/soyhenry/tree/main/m2/lecture/02" target="_blank" class="btn"><i class="icon-github"></i> Lectures 2</a>
+      </section>
+    </main>
   </body>
 </html>
