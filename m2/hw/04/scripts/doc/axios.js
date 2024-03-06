@@ -1,35 +1,31 @@
-// var url = "https://students-api.2.us-1.fl0.io/movies";
-var url = "https://webpt19b.web.app/data/movies.json?1";
-// var url = "https://webpt19b.cyclic.app/movies";
+// Assuming you have Axios included in your project
+
+const url = "https://webpt19b.web.app/data/movies.json";
 const movieListContainer = document.getElementById("movieList");
 
-// Fetch data from the specified URL
-fetch(url)
-  //
-  .then(handleResponse)
+// Using Axios to fetch data
+axios.get(url)
+  .then(response => {
+    // Handle the response status
+    if (response.status !== 200) {
+      throw new Error(`Request failed with status: ${response.status}`);
+    }
+
+    // Handle the JSON data
+    return response.data;
+  })
   .then(renderHTML)
-  .catch(handleError);
-
-// Handle the fetch response
-function handleResponse(response) {
-  if (!response.ok) {
-    throw new Error(`Network response was not ok: ${response.statusText}`);
-  }
-  return response.json();
-}
-
-// Handle errors during the fetch
-function handleError(error) {
-  console.error("Error:", error);
-  // Handle errors as needed
-}
+  .catch(error => {
+    console.error('Error:', error);
+    // Handle errors as needed
+  });
 
 // Render HTML based on the movie data
 function renderHTML(data) {
   const movieElements = data.map((movie) => {
     return /* html */ `
       <div class="card_item">
-        <a href="${movie.poster}" target="_blank">
+        <a href="#">
           <img src="${movie.poster}" alt="${movie.title}">
           <h3>${movie.title}</h3>
         </a>

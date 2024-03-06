@@ -1,6 +1,7 @@
 // var url = "https://students-api.2.us-1.fl0.io/movies";
-var url = "https://webpt19b.web.app/data/movies.json?1";
+// var url = "https://webpt19b.web.app/data/movies.json";
 // var url = "https://webpt19b.cyclic.app/movies";
+var url = "https://api.1rodemayo.com/movies";
 const movieListContainer = document.getElementById("movieList");
 
 // Fetch data from the specified URL
