@@ -15,7 +15,6 @@ let arrayData = [{ id: 1, name: "John Demo" }];
 // Middleware to parse JSON bodies
 app.use(express.json());
 app.use(express.static("public"));
-``;
 
 // Create operation - POST
 app.post("/api", (req, res) => {
