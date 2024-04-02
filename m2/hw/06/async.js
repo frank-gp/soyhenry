@@ -1,4 +1,4 @@
-const renderMovieCards = require("./renderCards.js");
+// const renderMovieCards = require("./renderCards.js");
 const axios = require("axios");
 
 // var url = "https://students-api.2.us-1.fl0.io/movies";
@@ -25,6 +25,7 @@ var url = "https://api.1rodemayo.com/movies";
 // };
 // ========== code_review_jquery. ==========
 
+// ========== axios ==========
 const fetchData = async () => {
   const response = await axios.get(url);
   console.log(response.data);
@@ -32,3 +33,8 @@ const fetchData = async () => {
 };
 
 fetchData();
+// ========== axios ==========
+
+// fetch(url)
+//   .then((res) => res.json())
+//   .then((data) => console.log(data));
