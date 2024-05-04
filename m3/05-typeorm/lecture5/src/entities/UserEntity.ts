@@ -23,7 +23,7 @@ export class UserEntity {
     // @JoinColumn()
     // vehicle: VehicleEntity
 
-    @OneToMany(() => VehicleEntity, (vehicle) => vehicle.user)
-    vehicles: VehicleEntity[]
+    @OneToMany(() => VehicleEntity, (vehicle) => vehicle.user123)
+    vehicles123: VehicleEntity[]
 
 }

@@ -24,12 +24,7 @@ export const createUserService = async (userData: UserDto): Promise<UserEntity> 
 export const getUsersService = async (): Promise<UserEntity[]> => {
   // const users = await AppDataSource.getRepository(UserEntity).find();
   const users = await UserModelEntity.find(
-    {
-      relations: {
-        vehicles: true
-      },
-    }
-  );
+    {relations: {vehicles123: true}});
   return users;
 };
 

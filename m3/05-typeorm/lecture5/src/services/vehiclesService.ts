@@ -3,7 +3,7 @@ import CreateVehicleDto from "../dto/CreateVehicleDto";
 import { VehicleEntity } from "../entities/VehicleEntity";
 
 export const getVehiclesService = async (): Promise<VehicleEntity[]> => {
-  const vehicles = await VehicleModelEntity.find({relations: {user: true}});
+  const vehicles = await VehicleModelEntity.find({relations: {user123: true}});
   return vehicles;
 };
 
@@ -14,7 +14,7 @@ export const createVehicleService = async (vehicle: CreateVehicleDto): Promise<V
   const user = await UserModelEntity.findOneBy({ id: vehicle.userId });
 
   if (user) {
-    newVehicle.user = user;
+    newVehicle.user123 = user;
     await VehicleModelEntity.save(newVehicle);
   }
 

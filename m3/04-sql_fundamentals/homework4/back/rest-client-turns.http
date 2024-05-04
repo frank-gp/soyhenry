@@ -8,6 +8,7 @@ GET  http://localhost:3000/turns/1
 ###
 POST http://127.0.0.1:3000/turns/schedule/
 Content-Type: application/json
+token: autenticado
 
 {
     "date": "2024-05-05",

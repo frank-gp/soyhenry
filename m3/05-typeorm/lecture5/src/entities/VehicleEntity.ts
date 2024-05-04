@@ -19,6 +19,6 @@ export class VehicleEntity {
     @Column()
     year: number
 
-    @ManyToOne(() => UserEntity, (user) => user.vehicles)
-    user: UserEntity
+    @ManyToOne(() => UserEntity, (user) => user.vehicles123)
+    user123: UserEntity
 }

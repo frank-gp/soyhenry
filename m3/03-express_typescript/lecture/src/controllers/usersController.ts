@@ -3,8 +3,8 @@ import { createUserService, getUsersService, deleteUserService } from "../servic
 import IUser from "../intefaces/IUser";
 
 export const createUser = async (req: Request, res: Response) => {
-  const { name, email, active } = req.body;
-  const newUser: IUser = await createUserService({ name, email, active });
+  const { name, email, active, age } = req.body;
+  const newUser: IUser = await createUserService({ name, email, active, age });
   res.status(201).json(newUser);
 };
 

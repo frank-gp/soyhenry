@@ -19,6 +19,6 @@ const turnsRouter = Router();
 turnsRouter.get("/", getTurnsController);
 turnsRouter.get("/:id", getTurnByIdController);
 turnsRouter.post("/schedule", createTurnController);
-turnsRouter.post("/cancel", cancelTurnController);
+turnsRouter.put("/cancel", cancelTurnController);
 
 export default turnsRouter;

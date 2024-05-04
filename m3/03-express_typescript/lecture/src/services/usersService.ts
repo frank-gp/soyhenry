@@ -6,6 +6,7 @@ let users: IUser[] = [
     id: 1,
     name: "Frank",
     email: "user@mail.com",
+    age: 32,
     active: true,
   },
 ];
@@ -17,11 +18,12 @@ export const createUserService = async (userData: UserDto): Promise<IUser> => {
   // crear un nuevo usuario
   // incluir el nuevo usuario dentro del arreglo
   // retornar el objeto nuevo
-  const newUser = {
+  const newUser: IUser = {
     id,
     name: userData.name,
     email: userData.email,
     active: userData.active,
+    age: userData.age,
   };
   users.push(newUser);
   id++;
