@@ -11,7 +11,7 @@ router.get("/users", usersController.getUsers);
 
 router.get("/users/byName", usersController.getuserByName);
 
-router.get("/users/:id", validateId, usersController.getUserById);
+router.get("/users/:id", usersController.getUserById);
 
 router.post("/users", usersController.createUser);
 

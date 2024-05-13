@@ -8,9 +8,9 @@ function App() {
   return (
     <>
     <NavBar />
-      <MisTurnos />
+      {/* <MisTurnos /> */}
       {/* <Home /> */}
-      {/* <Register /> */}
+      <Register />
       {/* <Login /> */}
     </>
   );
